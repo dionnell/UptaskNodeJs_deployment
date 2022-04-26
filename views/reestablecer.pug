@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        include partials/header
+    
+    body.login
+        .contenedor-formulario
+
+            form.caja-login(method="POST" action="/reestablecer" ) 
+                h1= nombrePagina
+                if locals.mensajes
+                    .alertas 
+                        each categoria in Object.keys(locals.mensajes) 
+                            each error in mensajes[categoria]
+                                .alerta(class=`${categoria}`)
+                                    p= error
+                p(style="color: black; font-size: 15px;") Ingresa tu Email Para generar un password nuevo 
+                br
+                .campo 
+                    label(for= "email") E-mail: 
+                    input(type="email" name="email" placeholder="gompachiro@gmail.com"  required)
+
+                .campo.enviar
+                    input(type="submit" value="Reestablecer Password" class="boton")
+
+                .campo.acciones 
+                    a(href="/iniciar-sesion") Iniciar Sesion

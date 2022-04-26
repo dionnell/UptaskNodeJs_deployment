@@ -1,0 +1,23 @@
+body {
+    font-family: cursive;
+}
+
+h2{
+    font-size: 3rem;
+    text-align: center;
+}
+
+a{
+    margin-top: 2rem;
+    text-align: center;
+    display: block;
+    padding: 1.5rem 0;
+    color: rgb(147, 32, 255);
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: yellowgreen;
+    border-radius: 15px;
+}
+p{
+    line-height: 2;
+}

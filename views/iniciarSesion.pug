@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        include partials/header
+    
+    body.login
+
+        .contenedor-formulario
+            
+
+            form#formulario.caja.caja-login(method="POST" action="/iniciar-sesion" ) 
+                h1 Inicia Sesion
+
+                if locals.mensajes
+                    .alertas 
+                        each categoria in Object.keys(locals.mensajes) 
+                            each error in mensajes[categoria]
+                                .alerta(class=`${categoria}`)
+                                    p= error
+
+                br
+                .campo 
+                    label(for= "email") E-mail: 
+                    input(type="email" name="email" placeholder="gompachiro@gmail.com" value=email required)
+                .campo
+                    label(for= "password") Password: 
+                    input(type="password" name="password" placeholder="Ingrese su contraseña" value=password required)
+                .campo.enviar
+                    input(type="submit" value="Inicia Sesion" class="boton")
+                .campo.acciones
+                    a(href="/crear-cuenta") Crear Cuenta
+                    a(href="/reestablecer") ¿Olvidaste tu contraseña?
+
+        script(src="/dist/bundle.js")

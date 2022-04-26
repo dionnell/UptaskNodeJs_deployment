@@ -1,0 +1,15 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        style 
+            include ./email.css
+    body 
+
+        h2 Confirme su Cuenta 
+        p presione el boton, para confirmar su cuenta.
+        a(href=`${confirmarUrl}`)  Reestablecer  Contraseña
+        p si no puedes acceder a este enlace, visita #{confirmarUrl}
+        p si no solicitaste esto, puedes ignorar este correo 
